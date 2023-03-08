@@ -4,12 +4,12 @@
 
 Get some parameters from shader matrix.
 
-``` cpp
+```hlsl
 float3 cameraForward = -unity_MatrixV._m02_m12_m22;
 
-float3 objectScale = float3(length(unity_ObjectToWorld._m00_m10_m20),
-				            length(unity_ObjectToWorld._m01_m11_m21),
-					        length(unity_ObjectToWorld._m02_m12_m22));
+float3 objectScale = float3(length(unity_ObjectToWorld._m00_m10_m20), 
+                            length(unity_ObjectToWorld._m01_m11_m21),
+			    length(unity_ObjectToWorld._m02_m12_m22));
 
 float3 worldPosition = unity_ObjectToWorld._m03_m13_m23;
 ```
