@@ -12,4 +12,9 @@ float3 objectScale = float3(length(unity_ObjectToWorld._m00_m10_m20),
 					        length(unity_ObjectToWorld._m02_m12_m22));
 
 float3 worldPosition = unity_ObjectToWorld._m03_m13_m23;
+
+float4 clipPosition = UnityWorldToClipPos(unity_ObjectToWorld._m03_m13_m23);
+
+float2 viewportPosition   = (clipPosition.xy + 1) * 0.5;
+	   viewportPosition.y = 1 - viewportPosition.y;
 ```
