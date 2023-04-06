@@ -16,5 +16,5 @@ float3 worldPosition = unity_ObjectToWorld._m03_m13_m23;
 float4 clipPosition = UnityWorldToClipPos(unity_ObjectToWorld._m03_m13_m23);
 
 float2 viewportPosition   = (clipPosition.xy + 1) * 0.5;
-	   viewportPosition.y = 1 - viewportPosition.y;
+       viewportPosition.y = 1 - viewportPosition.y;
 ```
